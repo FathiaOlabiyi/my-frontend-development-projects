@@ -34,6 +34,7 @@ button {
   border: 2px solid black;
   border-radius: 25px;
   transition: 0.3s;
+  color: black;
   box-shadow: 7px 7px rgba(0, 0, 0, 0.7);
   background-color: var(--font-color);
   cursor: pointer;
@@ -90,6 +91,7 @@ button:active {
 }
 
 .answers-container button {
+  color: black;
   margin-bottom: 25px;
   background-color: var(--font-color);
   border-radius: 20px;
