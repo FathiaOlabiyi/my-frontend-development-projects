@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>My Quiz App</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="heading">
+            <h1 class="logo" id="logo">MyQuiz</h1>
+            <button class="dark-mode-btn" id="dark-mode-btn">Dark Mode</button>
+        </header>
+        <button class="start-btn" id="start-btn">
+            Start Quiz
+        </button>
+        <div class="big-container">
+            <div class="quiz-container">
+                <p class="questions" id="questions"></p>
+                <div class="answers-container" id="answers-container">
+                    <!-- <button class="answer"></button>
+                    <button class="answer"></button>
+                    <button class="answer"></button>
+                    <button class="answer"></button> -->
+                </div>
+                <button class="next-btn" id="next-btn">Next</button>
+        </div>
+        <div class="restart-container">
+            <p class="score-text" id="score-text">Your score is <span class="score" id="score"></span> out of 5</p>
+            <button class="restart" id="restart">Restart Quiz</button>
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

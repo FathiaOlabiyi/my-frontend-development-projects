@@ -1,0 +1,705 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+:root {
+--btn-color: #ffa24b;
+--bg-color: rgb(255, 250, 241);
+--ft-color: rgb(115, 65, 40);
+--ft-color02: rgb(82, 47, 30);
+--hover-color: rgb(35, 15, 8);
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+h1, button{
+    font-family: "Yeseva One";
+}
+
+p {
+    font-family: "Josefin Sans";
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* HEADING */
+
+.heading {
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--ft-color);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.active {
+    top: 0;
+    z-index: 1;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo a{
+    word-spacing: 5px;
+    color: var(--bg-color);
+    font-size: 30px;
+}
+
+
+.list-box {
+    display: flex;
+}
+
+.list-box li {
+    padding: 0 25px;
+}
+
+.nav-links {
+    font-size: 18px;
+    font-family: "Yeseva One";
+    color: var(--bg-color);
+    font-weight: 100;
+    position: relative;
+}
+
+.nav-links::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--bg-color);
+    transition: 0.3s;
+}
+
+.nav-links:hover::after {
+    width: 70%;
+}
+
+.heading .bx {
+    display: none;
+}
+
+.order button {
+    font-size: 16px;
+    background-color: var(--btn-color);
+    border: 3px solid var(--btn-color);
+    border-radius: 30px;
+    padding: 10px 17px;
+    color: var(--bg-color);
+    transition: 0.3s;
+}
+
+.order button:hover {
+    background-color: transparent;
+    color: var(--btn-color);
+}
+
+/* MAIN */
+.main {
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-txts {
+    color: var(--ft-color);
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 900;
+    word-spacing: 5px;
+    margin-bottom: 30px;
+}
+
+.title span {
+    color: var(--btn-color);
+}
+
+.note {
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    max-width: 720px;
+    color: var(--ft-color);
+}
+
+.open-time, .phone-contact {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--ft-color);
+    display: inline;
+}
+
+.open-time {
+    margin-right: 30px;
+}
+
+.open-time span, .phone-contact span {
+    color: var(--btn-color);
+    cursor: pointer;
+}
+
+.phone-contact i {
+    font-size: 26px;
+    color: var(--ft-color);
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a i {
+    font-size: 22px;
+    color: var(--btn-color);
+    padding-right: 8px;
+    transition: 0.3s;
+}
+
+.home-order button {
+    font-size: 16px;
+    background-color: transparent;
+    border-radius: 30px;
+    padding: 10px 17px;
+    color: var(--ft-color);
+    transition: 0.3s;   
+    border: 3px solid var(--ft-color);
+}
+
+.home-order button:hover {
+    color: var(--bg-color);
+    background-color: var(--ft-color);
+}
+
+/* MENU */
+
+.menu {
+    background-color: var(--ft-color);
+    padding-top: 50px;
+    padding-bottom: 7rem;
+}
+
+.product-title {
+    text-align: center;
+    font-size: 50px;
+    padding: 3rem 0;
+    color: var(--bg-color);
+    word-spacing: 3px;
+    font-weight: 900;
+}
+
+.grid-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+
+}
+
+.product-box {
+    text-align: left;
+    width: 300px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--btn-color);
+}
+
+.product-content {
+    background-color: var(--bg-color);
+    padding: 20px;
+    
+}
+
+.product-box img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.name, .price {
+    font-family: "Yeseva One";
+    color: var(--ft-color);
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: var(--btn-color);
+}
+
+.product-order button {
+    font-size: 16px;
+    font-family: "Yeseva One";
+    border-radius: 30px;
+    color: var(--ft-color);
+    border: 3px solid var(--ft-color);
+    transition: 0.3s;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+.product-order button:hover {
+    background-color: var(--ft-color);
+    color: var(--bg-color);
+}
+
+/* ABOUT-US */
+
+.about-us {
+    margin-top: 7rem;
+    background-color: var(--bg-color);
+    width: 100%;
+}
+
+.about-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.about-title {
+    font-size: 50px;
+    text-align: center;
+    color: var(--ft-color);
+    padding: 5rem 0;
+    word-spacing: 3px;
+    font-weight: 900;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-us img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 40px;
+}
+
+.about-text {
+    width: 500px;
+    font-weight: 300;
+    line-height: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: var(--ft-color); 
+}
+
+.about-order button {
+    margin-top: 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 17px;
+    transition: 0.3s;      
+    background-color: transparent;
+    color: var(--btn-color);
+    border: 3px solid var(--btn-color);
+}
+
+.about-order button:hover {
+    background-color: var(--btn-color);
+    color: var(--bg-color);
+}
+
+.contact-section {
+    margin-top: 15rem;
+    background-color: var(--ft-color);
+    bottom: 0;
+    padding-bottom: 40px;
+}
+
+.contact-title {
+    font-size: 50px;
+    text-align: center;
+    color: var(--bg-color);
+    padding: 5rem 0;
+    word-spacing: 3px;
+    font-weight: 900;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 3rem;
+}
+
+.call-num i, .call-text, .message-text {
+    font-size: 18px;
+    color: var(--bg-color);
+    margin-bottom: 20px;
+    font-family: "Yeseva One";
+}
+
+.call-num i {
+    font-size: 26px;
+    font-family: "Yeseva One";
+}
+
+.phone-contact {
+    font-size: 24px;
+    color: var(--btn-color);   
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input, .form textarea {
+    background: transparent;
+    border-radius: 40px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 3px solid var(--btn-color);
+    font-size: 20px;
+    font-family: "Josefin Sans";
+    color: var(--bg-color);
+    outline: none;
+    width: 400px;
+}
+
+.form input::placeholder, .form textarea::placeholder {
+    font-size: 20px;
+    font-family: 'Josefin Sans';
+    color: var(--bg-color);
+}
+
+.form textarea {
+    height: 300px;
+}
+
+.submit button {
+    font-size: 16px;
+    background-color: var(--btn-color);
+    border: 3px solid var(--btn-color);
+    border-radius: 30px;
+    padding: 10px 17px;
+    color: var(--bg-color);
+    transition: 0.3s;
+}
+
+.submit button:hover {
+    background-color: transparent;
+    color: var(--btn-color);   
+}
+
+.address-icon {
+    font-size: 18px;
+    font-family: "Yeseva One";
+    color: var(--bg-color);
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.address-icon i {
+    font-size: 26px;
+    color: var(--btn-color);
+}
+
+.address-text {
+    font-size: 16px;
+    color: var(--btn-color);
+    font-weight: 400;
+    width: 200px;
+    line-height: 20px;
+}
+
+.contact-socials a i{
+    color: var(--btn-color);
+    transition: 0.3s;
+}
+
+
+/* RESOPNSIVE */
+
+@media (max-width: 1000px) {
+    .main {
+        height: 100vh;
+    }
+
+    .about-container img {
+        margin-left: 30px;
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 890px) {
+    body {
+        position: relative;
+    }
+
+    .heading {
+        justify-content: space-around;
+        width: 100%;
+    }
+    .main {
+        height: 100vh;
+    }
+
+
+    .heading .bx {
+        display: inline-block;
+    } 
+
+    .menu-btn {
+        color: var(--bg-color);
+        font-size: 35px;
+    }
+
+    .navbar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        background-color: var(--ft-color);
+        margin-left: 0;
+        width: 60%;
+        transition: 0.5s;
+        bottom: 0;
+        transform: translateX(-100%);
+    }
+
+     .show-menu {
+        transform: translateX(0);
+    }
+
+
+    .list-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        padding: 30px 50px;
+    }
+
+     .list-box li {
+        padding: 40px 0;
+    }
+
+     .nav-links{
+        font-size: 35px;
+    }
+
+    .list-box i {
+        font-size: 50px;
+        position: absolute;
+        color: var(--bg-color);
+        right: 5%;
+        top: 5%;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-container img {
+        margin-bottom: 40px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .main {
+        height: 130vh;
+        align-items: center;
+        padding-left: 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+
+}
+
+
+@media (max-width: 450px) {
+
+    .logo a{
+        font-size: 24px;
+    }
+
+    .menu-btn {
+        font-size: 30px;
+    }
+
+    .list-box i {
+        font-size: 37px;
+        top: 4%;
+    }
+
+    .order button{
+        padding: 7px 15px;
+        font-size: 16px;
+    }
+
+    .heading {
+        justify-content: space-between;
+    }
+
+    .title, .product-title, .about-title, .contact-title {
+        font-size: 40px;
+    }
+
+    .navbar {
+        height: 150vh;
+        width: 70%;
+    }
+
+    .nav-links {
+        font-size: 28px;
+    }
+
+    .main {
+        height: 130vh;
+        justify-content: left;
+        align-items: center;
+        text-align: left;
+    }
+
+    .overlay-txts {
+        text-align: left;
+    }
+
+     .note {
+        max-width: 370px;
+        font-size: 24px;
+    }
+
+    .open-time, .phone-contact {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .social-icons a i {
+        font-size: 28px;
+    }
+
+    .grid-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+     .about-container {
+        align-items: none;
+    }
+
+    .about-container img {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .about-content p {
+        max-width: 320px;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+    }
+
+    .form input, .form textarea {
+        width: 320px;
+    }
+}
+
+@media (max-width: 390px) {
+
+    .heading {
+        padding: 15px;
+    }
+
+    .main {
+       padding-top: 7rem;
+    }
+
+    .nav-links {
+        font-size: 26px;
+    }
+
+}
+
+@media (max-width: 370px) {
+    
+    .title, .product-title, .about-title, .contact-title {
+        font-size: 35px;
+    }
+        
+
+@media (max-width: 350px) {
+
+    .title, .product-title, .about-title, .contact-title {
+        font-size: 35px;
+    }
+
+    .main {
+        height: 180vh;
+        padding-bottom: 4rem;
+    }
+
+     .form input, .form textarea {
+        width: 290px;
+    }
+    
+
+    .note, .about-content p {
+        max-width: 290px;
+    }
+
+    .nav-links {
+        font-size: 24px;
+    }
+}
+
+
+
+
+
+
+
+
+
